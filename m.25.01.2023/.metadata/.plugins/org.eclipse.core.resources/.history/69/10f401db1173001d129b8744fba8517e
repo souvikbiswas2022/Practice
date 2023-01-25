@@ -1,0 +1,27 @@
+package com.masai.service;
+
+import java.util.List;
+
+import com.masai.exception.CommentException;
+import com.masai.model.Comment;
+
+public interface CommentService {
+
+	
+	
+	public List<Comment> getAllCommments(long postID) throws CommentException;
+	
+	public Comment getComment(long postID ,long commentID) throws CommentException;
+		
+		
+    public Comment createComment(long postId,Comment comment) throws CommentException;
+    
+    
+    
+    public Comment updateComment(long postID ,long commentID) throws CommentException;
+	
+	
+    public Comment deleteComment(long postID ,long commentID) throws CommentException;
+	
+		
+}
